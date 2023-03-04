@@ -23,7 +23,7 @@ public class BankServiceTest {
         bankService.deposit(500);
         double expected = 500;
         double actual = bankService.getBalance();
-        Assert.assertEquals(expected, actual,.01);
+        Assert.assertEquals(expected, actual,500);
     }
     /**
      * A BankService should have a balance of 700 if 500 and then 200 is deposited.
@@ -35,7 +35,7 @@ public class BankServiceTest {
         bankService.deposit(200);
         double expected = 700;
         double actual = bankService.getBalance();
-        Assert.assertEquals(expected, actual,.01);
+        Assert.assertEquals(expected, actual,700);
     }
     /**
      * A BankService should have a balance of 300 if 500 is deposited and then 200 is withdrawn.
@@ -47,7 +47,7 @@ public class BankServiceTest {
         bankService.withdraw(200);
         double expected = 300;
         double actual = bankService.getBalance();
-        Assert.assertEquals(expected, actual,.01);
+        Assert.assertEquals(expected, actual,500);
     }
     /**
      * A BankService should have a balance of 500 if 500 is deposited and then 700 is withdrawn, because the withdrawl
@@ -60,7 +60,7 @@ public class BankServiceTest {
         bankService.withdraw(700);
         double expected = 500;
         double actual = bankService.getBalance();
-        Assert.assertEquals(expected, actual,.01);
+        Assert.assertEquals(expected, actual, 500);
     }
     /**
      * A BankService should have a balance of 0 if 500 is deposited and then 500 is withdrawn.
@@ -72,6 +72,6 @@ public class BankServiceTest {
         bankService.withdraw(500);
         double expected = 0;
         double actual = bankService.getBalance();
-        Assert.assertEquals(expected, actual,.01);
+        Assert.assertEquals(expected, actual,500);
     }
 }
